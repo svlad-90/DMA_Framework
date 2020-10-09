@@ -34,13 +34,21 @@ jobs:
       
     # Add jom to path
     - name: Add jom to path
-      run: echo "::add-path::D:/a/DLT-Message-Analyzer/tools/jom/"
+      #run: echo "::add-path::D:/a/${{ github.event.repository.name }}/tools/jom/"
+      run: echo "D:/a/${{ github.event.repository.name }}/tools/jom/" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      shell: powershell
 
-    # Checkout DMA_Framework's revision, which is pushed
-    - name: Checkout of the DMA_Framework
+    # Installation of Python
+    - name: Installation of Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Checkout project's revision, which is pushed
+    - name: Checkout of the project
       uses: actions/checkout@v2
       with:
-        repository: svlad-90/DMA_Framework
+        repository: svlad-90/${{ github.event.repository.name }}
         path: .\
         ref: ${{ github.ref }}
 
@@ -54,7 +62,7 @@ jobs:
     - name: CMake
       run: |
         call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
-        cmake ..\DLT-Message-Analyzer\ "-GCodeBlocks - NMake Makefiles JOM" "-DCMAKE_BUILD_TYPE:STRING=Release"
+        cmake ..\${{ github.event.repository.name }}\dma_framework "-GCodeBlocks - NMake Makefiles JOM" "-DCMAKE_BUILD_TYPE:STRING=Release"
       shell: cmd
       working-directory: ..\build
     
@@ -70,6 +78,6 @@ jobs:
     - name: unit-tests
       run: | 
         call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
-        jom.exe -j8 --target test
+        ctest.exe --force-new-ctest-process .\
       shell: cmd
       working-directory: ../build
