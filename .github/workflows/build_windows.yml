@@ -1,0 +1,75 @@
+name: Build windows
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build_windows:
+    
+    runs-on: windows-latest
+
+    steps:
+         
+    # Creation of the ..\downloads directory
+    - name: Creation of the "..\downloads" directory
+      run: mkdir ..\downloads
+      shell: cmd
+      working-directory: .\
+    
+    # Creation of the ..\tools directory
+    - name: Creation of the "..\tools" directory
+      run: mkdir ..\tools
+      shell: cmd
+      working-directory: .\
+         
+    # Installation of jom
+    - name: Installation of the jom
+      run: |
+           Invoke-WebRequest http://download.qt.io/official_releases/jom/jom.zip -OutFile ..\downloads\jom.zip
+           Expand-Archive '..\downloads\jom.zip' '..\tools\jom' 
+      shell: powershell
+      
+    # Add jom to path
+    - name: Add jom to path
+      run: echo "::add-path::D:/a/DLT-Message-Analyzer/tools/jom/"
+
+    # Checkout DMA_Framework's revision, which is pushed
+    - name: Checkout of the DMA_Framework
+      uses: actions/checkout@v2
+      with:
+        repository: svlad-90/DMA_Framework
+        path: .\
+        ref: ${{ github.ref }}
+
+    # Create build directory
+    - name: Creation of the ".\build" directory
+      run: mkdir ..\build
+      shell: cmd
+      working-directory: .\
+
+    #CMake execution
+    - name: CMake
+      run: |
+        call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
+        cmake ..\DLT-Message-Analyzer\ "-GCodeBlocks - NMake Makefiles JOM" "-DCMAKE_BUILD_TYPE:STRING=Release"
+      shell: cmd
+      working-directory: ..\build
+    
+    # Build of the project
+    - name: Jom
+      run: |
+        call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
+        jom.exe -j8
+      shell: cmd
+      working-directory: ..\build
+      
+    # Unit-tests execution
+    - name: unit-tests
+      run: | 
+        call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
+        jom.exe -j8 --target test
+      shell: cmd
+      working-directory: ../build
