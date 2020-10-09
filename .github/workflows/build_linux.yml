@@ -13,11 +13,11 @@ jobs:
 
     steps:
 
-    # Checkout DMA_Framework's revision, which is pushed
-    - name: Checkout of the DMA_Framework
+    # Checkout project's revision, which is pushed
+    - name: Checkout of the project
       uses: actions/checkout@v2
       with:
-        repository: svlad-90/DMA_Framework
+        repository: svlad-90/${{ github.event.repository.name }}
         path: ./
         ref: ${{ github.ref }}
         
@@ -29,7 +29,7 @@ jobs:
 
     # CMake execution
     - name: CMake
-      run: cmake ../DLT-Message-Analyzer
+      run: cmake ../${{ github.event.repository.name }}/dma_framework
       shell: bash
       working-directory: ../build
     
@@ -41,6 +41,6 @@ jobs:
 
     # Unit-tests execution
     - name: unit-tests
-      run: make -j8 --target test
+      run: make -j8 test
       shell: bash
       working-directory: ../build

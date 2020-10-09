@@ -50,6 +50,7 @@ endif()
 
 ################### PROJECT ###############################
 project (DMA_Framework)
+enable_testing()
 
 CMAKE_MINIMUM_REQUIRED(VERSION 3.7 FATAL_ERROR)
 
