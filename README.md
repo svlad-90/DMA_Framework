@@ -1,5 +1,9 @@
 ![DMA_Framework logo](./md/DMA_Framework_logo.png)
 
+![Build linux](https://github.com/svlad-90/DMA_Framework/workflows/Build%20linux/badge.svg)
+![Build windows](https://github.com/svlad-90/DMA_Framework/workflows/Build%20windows/badge.svg)
+![Build clang-tidy](https://github.com/svlad-90/DMA_Framework/workflows/Build%20clang-tidy/badge.svg)
+
 ----
 
 - Module:   DMA_Framework
