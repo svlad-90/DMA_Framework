@@ -16,7 +16,7 @@ ENDIF()
 project(googletest-download NONE)
 
 include(ExternalProject)
-configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
+configure_file(cmake/CMakeLists_gtest.txt.in googletest-download/CMakeLists.txt)
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
   RESULT_VARIABLE result
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
@@ -47,6 +47,31 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 ################### GOOGLE TEST ( END ) ###################
+
+################### DMA_Plantuml ##########################
+project(dma_plantuml-download NONE)
+
+include(ExternalProject)
+configure_file(cmake/CMakeLists_dma_plantuml.txt.in dma_plantuml-download/CMakeLists.txt)
+execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
+  RESULT_VARIABLE result
+  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/dma_plantuml-download )
+if(result)
+  message(FATAL_ERROR "CMake step for DMA_Plantuml failed: ${result}")
+endif()
+execute_process(COMMAND ${CMAKE_COMMAND} --build .
+  RESULT_VARIABLE result
+  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/dma_plantuml-download )
+if(result)
+  message(FATAL_ERROR "Build step for DMA_PLantuml failed: ${result}")
+endif()
+
+# Add googletest directly to our build. This defines
+# the gtest and gtest_main targets.
+add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/dma_plantuml-src
+                 ${CMAKE_CURRENT_BINARY_DIR}/dma_plantuml-build
+                 EXCLUDE_FROM_ALL)
+################### DMA_Plantuml ( END ) ##################
 
 ################### PROJECT ###############################
 project (DMA_Framework)
