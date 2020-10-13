@@ -1,1 +1,1 @@
-add_g_test(UT_TNumberedObject)
+DMA_add_g_test(UT_TNumberedObject DMA_Plantuml)
