@@ -2,7 +2,9 @@
 
 #include <thread>
 
-#include <api/base/TNumberedObject.hpp>
+#include <base/TNumberedObject.hpp>
+
+#include "DMA_Plantuml.hpp"
 
 class CClassUnderTest : public DMA::TNumberedObject<CClassUnderTest>
 {};
@@ -15,7 +17,9 @@ class Test_CClassUnderTest : public ::testing::Test
 {
 protected:
     void SetUp()
-    {}
+    {
+        DMA::PlantUML::Creator::getInstance().initialize();
+    }
     void TearDown()
     {}
 };
