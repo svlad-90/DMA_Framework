@@ -1,0 +1,39 @@
+
+@startuml
+
+skinparam backgroundColor #FEFEFE
+skinparam wrapWidth 600
+package "DMA_Framework_Base" #DDDDDD
+{
+
+class "DMA::detail::guarded_call<Func>" as DMA::detail::guarded_call_Func_
+{
+    + detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
+}
+
+class "DMA::tCallbackGuardian"
+{
+    + DMA::detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
+}
+
+class "DMA::tGuard"
+{
+    + bool isAlive() const
+    + tGuard( const tGuardedElement& guardedElement )
+}
+
+class "DMA::tGuarded"
+{
+    + tGuard getGuard() const
+    + tGuarded()
+}
+
+}
+
+'====================Dependencies section====================
+DMA::detail::guarded_call_Func_ "1" --> "1" DMA::tGuard : contains
+DMA::tCallbackGuardian "1" --> "*" DMA::detail::guarded_call_Func_ : creates
+DMA::tCallbackGuardian "1" *-- "1" DMA::tGuarded : contains
+DMA::tGuarded "1" --> "*" DMA::tGuard : creates
+
+@enduml

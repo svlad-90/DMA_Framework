@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="440px" preserveAspectRatio="none" style="width:738px;height:440px;background:#FEFEFE;" version="1.1" viewBox="0 0 738 440" width="738px" zoomAndPan="magnify"><defs><filter height="300%" id="f1tgpjxfwtvt1g" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[9f15be47acc2a41528901c4fc27ec7cc]
+cluster DMA_Framework_Base--><polygon fill="#DDDDDD" filter="url(#f1tgpjxfwtvt1g)" points="16,6,183,6,190,29.6094,716,29.6094,716,428,16,428,16,6" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="16" x2="190" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="20" y="22.5332">DMA_Framework_Base</text><!--MD5=[89ac2743a9d778abe21af159250c8987]
+class DMA::detail::guarded_call_Func_--><rect codeLine="8" fill="#FEFECE" filter="url(#f1tgpjxfwtvt1g)" height="61.8359" id="DMA::detail::guarded_call_Func_" style="stroke: #A80036; stroke-width: 1.5;" width="487" x="32.5" y="189"/><ellipse cx="186.75" cy="205" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M189.5156,200.875 Q189.6719,200.6563 189.8594,200.5469 Q190.0469,200.4375 190.2656,200.4375 Q190.6406,200.4375 190.875,200.6953 Q191.1094,200.9531 191.1094,201.5625 L191.1094,203.0156 Q191.1094,203.625 190.875,203.8906 Q190.6406,204.1563 190.2656,204.1563 Q189.9219,204.1563 189.7188,203.9531 Q189.5156,203.7656 189.4063,203.25 Q189.3594,202.8906 189.1719,202.7031 Q188.8438,202.3281 188.2344,202.1094 Q187.625,201.8906 187,201.8906 Q186.2344,201.8906 185.6016,202.2188 Q184.9688,202.5469 184.4766,203.2969 Q183.9844,204.0469 183.9844,205.0781 L183.9844,206.1719 Q183.9844,207.4063 184.875,208.2266 Q185.7656,209.0469 187.3594,209.0469 Q188.2969,209.0469 188.9531,208.7969 Q189.3438,208.6406 189.7656,208.2031 Q190.0313,207.9375 190.1797,207.8594 Q190.3281,207.7813 190.5313,207.7813 Q190.8594,207.7813 191.1172,208.0391 Q191.375,208.2969 191.375,208.6406 Q191.375,208.9844 191.0313,209.3906 Q190.5313,209.9688 189.7344,210.2969 Q188.6563,210.75 187.3594,210.75 Q185.8438,210.75 184.6406,210.125 Q183.6563,209.625 182.9688,208.5547 Q182.2813,207.4844 182.2813,206.2031 L182.2813,205.0469 Q182.2813,203.7188 182.8984,202.5703 Q183.5156,201.4219 184.6094,200.8047 Q185.7031,200.1875 186.9375,200.1875 Q187.6719,200.1875 188.3203,200.3516 Q188.9688,200.5156 189.5156,200.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="139" x="207.25" y="209.9102">DMA::detail::guarded_call</text><rect fill="#FEFEFE" height="17.0938" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" width="29" x="493.5" y="186"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="27" x="494.5" y="199.457">Func</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="33.5" x2="518.5" y1="221" y2="221"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="33.5" x2="518.5" y1="229" y2="229"/><ellipse cx="43.5" cy="240" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="461" x="52.5" y="244.4189">detail::guarded_call&lt;Func&gt; guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )</text><!--MD5=[0c3d468b9973e5ba5cf2e7c64ae2951d]
+class DMA::tCallbackGuardian--><rect codeLine="13" fill="#FEFECE" filter="url(#f1tgpjxfwtvt1g)" height="61.8359" id="DMA::tCallbackGuardian" style="stroke: #A80036; stroke-width: 1.5;" width="516" x="136" y="42"/><ellipse cx="323.25" cy="58" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M326.0156,53.875 Q326.1719,53.6563 326.3594,53.5469 Q326.5469,53.4375 326.7656,53.4375 Q327.1406,53.4375 327.375,53.6953 Q327.6094,53.9531 327.6094,54.5625 L327.6094,56.0156 Q327.6094,56.625 327.375,56.8906 Q327.1406,57.1563 326.7656,57.1563 Q326.4219,57.1563 326.2188,56.9531 Q326.0156,56.7656 325.9063,56.25 Q325.8594,55.8906 325.6719,55.7031 Q325.3438,55.3281 324.7344,55.1094 Q324.125,54.8906 323.5,54.8906 Q322.7344,54.8906 322.1016,55.2188 Q321.4688,55.5469 320.9766,56.2969 Q320.4844,57.0469 320.4844,58.0781 L320.4844,59.1719 Q320.4844,60.4063 321.375,61.2266 Q322.2656,62.0469 323.8594,62.0469 Q324.7969,62.0469 325.4531,61.7969 Q325.8438,61.6406 326.2656,61.2031 Q326.5313,60.9375 326.6797,60.8594 Q326.8281,60.7813 327.0313,60.7813 Q327.3594,60.7813 327.6172,61.0391 Q327.875,61.2969 327.875,61.6406 Q327.875,61.9844 327.5313,62.3906 Q327.0313,62.9688 326.2344,63.2969 Q325.1563,63.75 323.8594,63.75 Q322.3438,63.75 321.1406,63.125 Q320.1563,62.625 319.4688,61.5547 Q318.7813,60.4844 318.7813,59.2031 L318.7813,58.0469 Q318.7813,56.7188 319.3984,55.5703 Q320.0156,54.4219 321.1094,53.8047 Q322.2031,53.1875 323.4375,53.1875 Q324.1719,53.1875 324.8203,53.3516 Q325.4688,53.5156 326.0156,53.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="133" x="343.75" y="62.9102">DMA::tCallbackGuardian</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="137" x2="651" y1="74" y2="74"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="137" x2="651" y1="82" y2="82"/><ellipse cx="147" cy="93" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="490" x="156" y="97.4189">DMA::detail::guarded_call&lt;Func&gt; guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )</text><!--MD5=[a5817c51f51ab3b0534ca89edbd4ca5c]
+class DMA::tGuard--><rect codeLine="18" fill="#FEFECE" filter="url(#f1tgpjxfwtvt1g)" height="75.6719" id="DMA::tGuard" style="stroke: #A80036; stroke-width: 1.5;" width="272" x="315" y="336"/><ellipse cx="412.75" cy="352" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M415.5156,347.875 Q415.6719,347.6563 415.8594,347.5469 Q416.0469,347.4375 416.2656,347.4375 Q416.6406,347.4375 416.875,347.6953 Q417.1094,347.9531 417.1094,348.5625 L417.1094,350.0156 Q417.1094,350.625 416.875,350.8906 Q416.6406,351.1563 416.2656,351.1563 Q415.9219,351.1563 415.7188,350.9531 Q415.5156,350.7656 415.4063,350.25 Q415.3594,349.8906 415.1719,349.7031 Q414.8438,349.3281 414.2344,349.1094 Q413.625,348.8906 413,348.8906 Q412.2344,348.8906 411.6016,349.2188 Q410.9688,349.5469 410.4766,350.2969 Q409.9844,351.0469 409.9844,352.0781 L409.9844,353.1719 Q409.9844,354.4063 410.875,355.2266 Q411.7656,356.0469 413.3594,356.0469 Q414.2969,356.0469 414.9531,355.7969 Q415.3438,355.6406 415.7656,355.2031 Q416.0313,354.9375 416.1797,354.8594 Q416.3281,354.7813 416.5313,354.7813 Q416.8594,354.7813 417.1172,355.0391 Q417.375,355.2969 417.375,355.6406 Q417.375,355.9844 417.0313,356.3906 Q416.5313,356.9688 415.7344,357.2969 Q414.6563,357.75 413.3594,357.75 Q411.8438,357.75 410.6406,357.125 Q409.6563,356.625 408.9688,355.5547 Q408.2813,354.4844 408.2813,353.2031 L408.2813,352.0469 Q408.2813,350.7188 408.8984,349.5703 Q409.5156,348.4219 410.6094,347.8047 Q411.7031,347.1875 412.9375,347.1875 Q413.6719,347.1875 414.3203,347.3516 Q414.9688,347.5156 415.5156,347.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="433.25" y="356.9102">DMA::tGuard</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="316" x2="586" y1="368" y2="368"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="316" x2="586" y1="376" y2="376"/><ellipse cx="326" cy="387" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="93" x="335" y="391.4189">bool isAlive() const</text><ellipse cx="326" cy="400.8359" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="246" x="335" y="405.2549">tGuard( const tGuardedElement&amp; guardedElement )</text><!--MD5=[0afc177993e3e1ba0a82c721de66e5e8]
+class DMA::tGuarded--><rect codeLine="24" fill="#FEFECE" filter="url(#f1tgpjxfwtvt1g)" height="75.6719" id="DMA::tGuarded" style="stroke: #A80036; stroke-width: 1.5;" width="145" x="554.5" y="182"/><ellipse cx="583.45" cy="198" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M586.2156,193.875 Q586.3719,193.6563 586.5594,193.5469 Q586.7469,193.4375 586.9656,193.4375 Q587.3406,193.4375 587.575,193.6953 Q587.8094,193.9531 587.8094,194.5625 L587.8094,196.0156 Q587.8094,196.625 587.575,196.8906 Q587.3406,197.1563 586.9656,197.1563 Q586.6219,197.1563 586.4188,196.9531 Q586.2156,196.7656 586.1063,196.25 Q586.0594,195.8906 585.8719,195.7031 Q585.5438,195.3281 584.9344,195.1094 Q584.325,194.8906 583.7,194.8906 Q582.9344,194.8906 582.3016,195.2188 Q581.6688,195.5469 581.1766,196.2969 Q580.6844,197.0469 580.6844,198.0781 L580.6844,199.1719 Q580.6844,200.4063 581.575,201.2266 Q582.4656,202.0469 584.0594,202.0469 Q584.9969,202.0469 585.6531,201.7969 Q586.0438,201.6406 586.4656,201.2031 Q586.7313,200.9375 586.8797,200.8594 Q587.0281,200.7813 587.2313,200.7813 Q587.5594,200.7813 587.8172,201.0391 Q588.075,201.2969 588.075,201.6406 Q588.075,201.9844 587.7313,202.3906 Q587.2313,202.9688 586.4344,203.2969 Q585.3563,203.75 584.0594,203.75 Q582.5438,203.75 581.3406,203.125 Q580.3563,202.625 579.6688,201.5547 Q578.9813,200.4844 578.9813,199.2031 L578.9813,198.0469 Q578.9813,196.7188 579.5984,195.5703 Q580.2156,194.4219 581.3094,193.8047 Q582.4031,193.1875 583.6375,193.1875 Q584.3719,193.1875 585.0203,193.3516 Q585.6688,193.5156 586.2156,193.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="82" x="600.55" y="202.9102">DMA::tGuarded</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="555.5" x2="698.5" y1="214" y2="214"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="555.5" x2="698.5" y1="222" y2="222"/><ellipse cx="565.5" cy="233" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="119" x="574.5" y="237.4189">tGuard getGuard() const</text><ellipse cx="565.5" cy="246.8359" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="53" x="574.5" y="251.2549">tGuarded()</text><!--MD5=[927cb1060dc9b3ed9752721dea3ea0d7]
+link DMA::detail::guarded_call_Func_ to DMA::tGuard--><path codeLine="33" d="M310.574,251.03 C337.362,274.297 374.751,306.772 404.214,332.363 " fill="none" id="DMA::detail::guarded_call_Func_-to-DMA::tGuard" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="408.132,335.766,403.959,326.8449,404.3567,332.4878,398.7138,332.8854,408.132,335.766" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="369" y="302.4951">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="309.6917" y="272.2599">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="392.8727" y="325.0862">1</text><!--MD5=[d1a2c2879bcc29b9a00ec748ea99652a]
+link DMA::tCallbackGuardian to DMA::detail::guarded_call_Func_--><path codeLine="34" d="M369.55,104.044 C350.406,127.569 323.769,160.301 303.812,184.824 " fill="none" id="DMA::tCallbackGuardian-to-DMA::detail::guarded_call_Func_" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="300.418,188.994,309.2008,184.5373,303.5736,185.1156,302.9953,179.4884,300.418,188.994" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="343" y="148.4951">creates</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="357.0473" y="125.2767">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="300.2126" y="178.013">*</text><!--MD5=[7ecb298b4a89406ac7485c3d9c5ee190]
+reverse link DMA::tCallbackGuardian to DMA::tGuarded--><path codeLine="35" d="M453.72,111.165 C488.549,132.84 532.341,160.092 567.186,181.777 " fill="none" id="DMA::tCallbackGuardian-backto-DMA::tGuarded" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="442.278,104.044,445.2587,110.6102,452.4663,110.3843,449.4856,103.8181,442.278,104.044" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="518" y="148.4951">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="444.0937" y="125.2767">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="548.9082" y="171.0992">1</text><!--MD5=[1a63bdfb7fc046be04a07ac78ca31af7]
+link DMA::tGuarded to DMA::tGuard--><path codeLine="36" d="M583.946,258.183 C557.854,280.717 524.555,309.475 497.811,332.572 " fill="none" id="DMA::tGuarded-to-DMA::tGuard" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="493.915,335.937,503.3407,333.0813,497.699,332.6687,498.1115,327.0269,493.915,335.937" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="545" y="302.4951">creates</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="569.5265" y="279.0927">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="496.3665" y="325.0019">*</text><!--MD5=[f3ba753497208bb13e78c799777aca7b]
+@startuml
+
+skinparam backgroundColor #FEFEFE
+skinparam wrapWidth 600
+package "DMA_Framework_Base" #DDDDDD
+{
+
+class "DMA::detail::guarded_call<Func>" as DMA::detail::guarded_call_Func_
+{
+    + detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
+}
+
+class "DMA::tCallbackGuardian"
+{
+    + DMA::detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
+}
+
+class "DMA::tGuard"
+{
+    + bool isAlive() const
+    + tGuard( const tGuardedElement& guardedElement )
+}
+
+class "DMA::tGuarded"
+{
+    + tGuard getGuard() const
+    + tGuarded()
+}
+
+}
+
+'====================Dependencies section====================
+DMA::detail::guarded_call_Func_ "1" - -> "1" DMA::tGuard : contains
+DMA::tCallbackGuardian "1" - -> "*" DMA::detail::guarded_call_Func_ : creates
+DMA::tCallbackGuardian "1" *- - "1" DMA::tGuarded : contains
+DMA::tGuarded "1" - -> "*" DMA::tGuard : creates
+
+@enduml
+
+@startuml
+
+skinparam backgroundColor #FEFEFE
+skinparam wrapWidth 600
+package "DMA_Framework_Base" #DDDDDD
+{
+
+class "DMA::detail::guarded_call<Func>" as DMA::detail::guarded_call_Func_
+{
+    + detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
+}
+
+class "DMA::tCallbackGuardian"
+{
+    + DMA::detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
+}
+
+class "DMA::tGuard"
+{
+    + bool isAlive() const
+    + tGuard( const tGuardedElement& guardedElement )
+}
+
+class "DMA::tGuarded"
+{
+    + tGuard getGuard() const
+    + tGuarded()
+}
+
+}
+
+DMA::detail::guarded_call_Func_ "1" - -> "1" DMA::tGuard : contains
+DMA::tCallbackGuardian "1" - -> "*" DMA::detail::guarded_call_Func_ : creates
+DMA::tCallbackGuardian "1" *- - "1" DMA::tGuarded : contains
+DMA::tGuarded "1" - -> "*" DMA::tGuard : creates
+
+@enduml
+
+PlantUML version 1.2020.16(Sun Aug 23 23:20:43 EEST 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1251
+Language: en
+Country: US
+--></g></svg>
