@@ -25,12 +25,20 @@ DMA_sync_plantuml()
 project (DMA_Framework)
 enable_testing()
 
+option(DMA_GENERATE_CLASS_DIAGRAMS "GENERATE_CLASS_DIAGRAMS" OFF)
+
+if(DMA_GENERATE_CLASS_DIAGRAMS)
+    message("[DMA] Generation of class diagrams turned on. Special binary \"CreateClassDiagrams\" will be built.")
+    add_definitions(-DPUML_ENABLED)
+    add_definitions(-DDMA_FORCE_LINK_ON)
+endif(DMA_GENERATE_CLASS_DIAGRAMS)
+
 CMAKE_MINIMUM_REQUIRED(VERSION 3.14 FATAL_ERROR)
 
 DMA_Prepare()
 
 include_directories(include)
 
-#add_subdirectory(src)
+DMA_add_subdirectory_with_clang_tidy (src)
 add_subdirectory(test)
 ################### PROJECT ( END ) #######################

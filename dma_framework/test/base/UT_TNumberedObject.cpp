@@ -2,9 +2,7 @@
 
 #include <thread>
 
-#include <base/TNumberedObject.hpp>
-
-#include "DMA_Plantuml.hpp"
+#include <dma/base/TNumberedObject.hpp>
 
 class CClassUnderTest : public DMA::TNumberedObject<CClassUnderTest>
 {};
@@ -12,19 +10,16 @@ class CClassUnderTest : public DMA::TNumberedObject<CClassUnderTest>
 class CZeroID : public DMA::TNumberedObject<CZeroID>
 {};
 
-
 class Test_CClassUnderTest : public ::testing::Test
 {
 protected:
     void SetUp()
-    {
-        DMA::PlantUML::Creator::getInstance().initialize();
-    }
+    {}
     void TearDown()
     {}
 };
 
-TEST_F(Test_CClassUnderTest, base_test_1)
+TEST_F(Test_CClassUnderTest, test_numbered_object_base_1)
 {
     auto currentObjectIDCounter = CClassUnderTest::getObjectIDCounter();
     DMA::tObjectID objectsCounter = 0;
@@ -44,7 +39,7 @@ TEST_F(Test_CClassUnderTest, base_test_1)
     ASSERT_EQ(CZeroID::getObjectIDCounter(), DMA::INVALID_OBJECT_ID);
 }
 
-TEST_F(Test_CClassUnderTest, base_test_2)
+TEST_F(Test_CClassUnderTest, test_numbered_object_base_2)
 {
     auto currentObjectIDCounter = CClassUnderTest::getObjectIDCounter();
     DMA::tObjectID objectsCounter = 0;
@@ -64,7 +59,7 @@ TEST_F(Test_CClassUnderTest, base_test_2)
     ASSERT_EQ(CZeroID::getObjectIDCounter(), DMA::INVALID_OBJECT_ID);
 }
 
-TEST_F(Test_CClassUnderTest, base_test_multi_threading)
+TEST_F(Test_CClassUnderTest, test_numbered_object_multi_threaded)
 {
     DMA::tObjectID number_of_threads = 10;
     DMA::tObjectID number_of_iterations = 100;

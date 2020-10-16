@@ -15,15 +15,8 @@ namespace DMA
 
     static const tObjectID INVALID_OBJECT_ID = static_cast<uint64_t>(-1);
 
-    class INumberedObject
-    {
-    public:
-        virtual ~INumberedObject() = default;
-        virtual tObjectID getObjectID() const = 0;
-    };
-
     template<typename T>
-    class TNumberedObject : public INumberedObject
+    class TNumberedObject
     {
     public:
 
@@ -31,7 +24,7 @@ namespace DMA
         mObjectID(++sObjectID)
         {}
 
-        virtual tObjectID getObjectID() const final override
+        tObjectID getObjectID() const
         {
             return mObjectID;
         }
