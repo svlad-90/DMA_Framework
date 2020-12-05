@@ -1,5 +1,3 @@
-#pragma once
-
 #include "DMA_Plantuml.hpp"
 #include "dma/base/initializable/CBaseSynchronousInitializable.hpp"
 #include "dma/base/ForceLink.hpp"
