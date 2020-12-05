@@ -6,6 +6,27 @@ skinparam wrapWidth 600
 package "DMA_Framework_Base" #DDDDDD
 {
 
+class "DMA::CBaseSynchronousInitializable"
+{
+    # {abstract} virtual virtual tSyncInitOperationResult init() = 0
+    # {abstract} virtual virtual tSyncInitOperationResult shutdown() = 0
+    + virtual virtual tSyncInitOperationResult startInit()
+    + virtual virtual tSyncInitOperationResult startShutdown()
+    + virtual virtual virtual bool isInitialized () const
+}
+
+class "DMA::INamedObject"
+{
+    + char* getName() const
+}
+
+class "DMA::ISynchronousInitializable"
+{
+    + {abstract} virtual virtual tSyncInitOperationResult startInit() = 0
+    + {abstract} virtual virtual tSyncInitOperationResult startShutdown() = 0
+    + {abstract} virtual virtual virtual bool isInitialized () const = 0
+}
+
 class "DMA::detail::guarded_call<Func>" as DMA::detail::guarded_call_Func_
 {
     + detail::guarded_call<Func> guardCallback( Func target, tExpiredCallback mExpiredCallback = {} )
@@ -29,6 +50,9 @@ class "DMA::tGuarded"
 }
 
 }
+
+'====================Inheritance section====================
+DMA::ISynchronousInitializable <|-- DMA::CBaseSynchronousInitializable : implements
 
 '====================Dependencies section====================
 DMA::detail::guarded_call_Func_ "1" --> "1" DMA::tGuard : contains
