@@ -45,6 +45,9 @@ int main()
 {
     DMA_FORCE_LINK_REFERENCE(Guard)
     DMA_FORCE_LINK_REFERENCE(GuardedCallback)
+    DMA_FORCE_LINK_REFERENCE(CBaseSynchronousInitializable)
+    DMA_FORCE_LINK_REFERENCE(IComponent)
+    DMA_FORCE_LINK_REFERENCE(INamedObject)
 
     DMA::PlantUML::Creator::getInstance().initialize();
     DMA::PlantUML::Creator::getInstance().setBackgroundColor("#FEFEFE");

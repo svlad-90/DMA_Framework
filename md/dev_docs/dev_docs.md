@@ -15,6 +15,7 @@ It's main purposes is to:
 ## Table of contents
 
 #### [DMA_Base](../../dma_framework/include/dma/base/doc/doc.md)
+#### [DMA_Component](../../dma_framework/include/dma/component/doc/doc.md)
 
 ----
 
