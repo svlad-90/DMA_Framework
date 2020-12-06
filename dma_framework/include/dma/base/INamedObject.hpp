@@ -12,6 +12,6 @@ namespace DMA
          * the provided name mainly for tracing purpose.
          * @return - the name of the object.
          */
-        virtual char* getName() const = 0;
+        virtual const char* getName() const = 0;
     };
 }
