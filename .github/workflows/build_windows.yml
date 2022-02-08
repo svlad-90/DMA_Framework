@@ -5,6 +5,12 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Target branch'     
+        required: true
+        default: 'master'
 
 jobs:
   build_windows:
@@ -12,6 +18,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
+
+    - uses: ilammy/msvc-dev-cmd@v1
          
     # Creation of the ..\downloads directory
     - name: Creation of the "..\downloads" directory
@@ -61,7 +69,6 @@ jobs:
     #CMake execution
     - name: CMake
       run: |
-        call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
         cmake ..\${{ github.event.repository.name }}\dma_framework "-GCodeBlocks - NMake Makefiles JOM" "-DCMAKE_BUILD_TYPE:STRING=Release"
       shell: cmd
       working-directory: ..\build
@@ -69,7 +76,6 @@ jobs:
     # Build of the project
     - name: Jom
       run: |
-        call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
         jom.exe -j8
       shell: cmd
       working-directory: ..\build
@@ -77,7 +83,6 @@ jobs:
     # Unit-tests execution
     - name: unit-tests
       run: | 
-        call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsx86_amd64.bat"
         ctest.exe --force-new-ctest-process .\
       shell: cmd
       working-directory: ../build
